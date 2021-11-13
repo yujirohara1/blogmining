@@ -1,0 +1,35 @@
+{% extends 'common.html' %}
+ 
+{% block title %}記事収集{% endblock %}
+
+{% block content %}
+  %div.container-fluid(style="")
+
+    %div.row
+      %div.col-md-6
+          ビューティフルスープで自分のブログ記事を収集して一覧表示する。
+      %div.col-md-6
+        %a.btn.btn-warning.btn-sm#btnRefleshJisseki(type="button")
+          収集開始
+    %div.row
+      %div.col-md-12
+        %table.table-bordered.row.hover#tableJisseki(style="overflow-y: auto;")
+          %thead
+            %tr
+              %th
+                記事ID
+              %th
+                投稿日
+              %th
+                タイトル
+              %th
+                カテゴリ
+              %th
+                本文
+          %tbody
+{% endblock %}
+
+{% block scripts %}
+    <script src="../static/main/js/main.js"></script>
+{% endblock  %}
+

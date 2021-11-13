@@ -1,0 +1,145 @@
+-extends "common.html"
+
+{% block title %}牛乳宅配管理システム LatteCloud{% endblock %}
+
+{% block content %}
+ 
+  %div.container-fluid(style="background-image:url('../static/image/main_image.jpg'); background-size:cover; background-repeat:no-repeat")
+    %div.row
+      &nbsp;
+    %div.row
+      %div.col-md-4
+        %img.img-responsive(src="../static/image/logo_small.png" align="left" style="position:absolute; top:-5px")
+        %h5(style="position:absolute; left:100px; top10px")
+          牛乳宅配管理サービス&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© Yujiro Hara, 2020
+        %h1(style="font-size:45px; position:absolute; left:90px;")
+          &nbsp;Latte Cloud
+        %br
+        %h1(style="font-size:45px; color:transparent" )
+           &nbsp;
+        %br
+        %form(action="/" method="POST")
+          %div.row.text-right
+            %div.col-md-1
+            %div.col-md-11
+              %div.input-group.input-group-lg
+                %span.input-group-addon
+                  ユーザー名
+                %input.form-control.input-sm(type="text" name="username")
+              %div.input-group.input-group-lg
+                %span.input-group-addon
+                  パスワード
+                %input.form-control.input-sm(type="password" name="password")
+          %div.row
+            &nbsp;
+          %div.row.text-right
+            %div.col-md-1
+            %div.col-md-11
+              %input.btn.btn-default.btn-lg#btnLogin(type="submit" value="サインイン")
+              {% if result == 401 %}
+                <p style="font-weight:bold; color:#4d4d4d; font-size:16px">ユーザー名またはパスワードが違います。</p>
+              {% endif %}　
+          
+      %div.col-md-7
+        <div class="jumbotron" style="background-color:#fff4f9; opacity:0.9">
+          <h1>宅配システムの新常識</h1>
+          <h1 style="font-size:52px">LatteCloud ラテクラウド</h1>
+          <p>シンプル、速い、インストール不要</p>
+          <p>牛乳宅配店向け、完全無料の請求管理システム</p>
+
+          %div.row
+            %div.col-md-4
+              %form(action="/demologin" method="POST")
+                %input.form-control.input-sm(type="hidden" name="username" value="demo")
+                %input.form-control.input-sm(type="hidden" name="password" value="demo")
+                %input.btn.btn-success.btn-lg#btnDemoLogin(type="submit" value="体験版へログイン")
+            %div.col-md-8#lblBrowserCheckAlert
+                
+
+
+
+
+          </div>
+      %div.col-md-1
+    %div.row
+      %div.col-md-4
+      %div.col-md-7
+        %div.jumbotron(style="background-color:#f4f9ff; opacity:0.95")
+          %div.row
+            %div.col-md-12
+              %p
+                初めての方はこちら
+              %div.row
+                %div.col-md-10
+                  %div.input-group.input-group-lg
+                    %span.input-group-addon(style="width:180px")
+                      Email
+                    %input#txtMailAddr(type="email" class="form-control" placeholder="lattecloud@gmail.com" style="width:350px")
+                %div.col-md-2
+                  &nbsp;
+              %div.row
+                %div.col-md-10
+                  %div.input-group.input-group-lg
+                    %span.input-group-addon(style="width:180px")
+                      お店の名前
+                    %input#txtOmise(type="text" class="form-control" placeholder="すずき牛乳販売店" style="width:350px")
+                %div.col-md-2
+                  <a class="btn btn-success btn-lg text-right" id="btnSendMail" role="button">利用登録</a>
+
+          %div.row
+            %div.col-md-12
+              %span#alertMessageArea
+                &nbsp;
+      %div.col-md-1
+
+    %div.row
+      &nbsp;
+    %div.row
+      %div.col-md-4
+      %div.col-md-7
+        <div class="panel panel-primary">
+          <div class="panel-heading" style="font-size:16px">改訂履歴</div>
+          <div class="panel-body" style="height: 100px;overflow-y: scroll;">
+            <p class="kaitei">2021 / 3 / 12　請求データに確定マークを付する機能を追加 </p>
+            <p class="kaitei">2021 / 2 / 7　請求書に印字するコメントを支払方法区分ごとにマスタ管理とする対応 </p>
+            <p class="kaitei">2021 / 1 / 31　祝サービスローンチ </p>
+          </div>
+        </div>
+      %div.col-md-1
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+    %div.row
+      &nbsp;
+{% endblock %}
+
+{% block scripts %}
+
+<script src="../static/main/js/logintop.js"></script>
+
+{% endblock  %}

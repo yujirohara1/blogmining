@@ -1,0 +1,356 @@
+.sorry-image{
+    background-image:url(../../../static/image/sorry.png); 
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 300px; 
+    float: left;
+}
+.sorry-message{
+    margin-top: 50px;
+    width: 700px;
+    height: 300px;
+    float: left;
+    font-size: 15px;
+}
+
+.cell-loading{
+    background-image:url(../../../static/image/Iphone-spinner-1.gif); 
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+td.highlight {
+    background-color: whitesmoke !important;
+}
+
+.row_selected td {
+    background-color: #dbedff !important; /* Add !important to make sure override datables base styles */
+}
+
+table.dataTable thead tr {
+  background-color: #73389a;
+  color:white;
+}
+.pull-right {
+  float: right !important;
+}
+.vmiddle {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.input-group-addon.custom_msize{
+    padding: 6px 12px;
+    font-size: 18px;
+    width:250px;
+}
+
+.form-control.custom_msize{
+    font-size: 14px;
+    height: 42px;
+}
+
+.btn.custom_msize{
+    padding: 7.5px 12px;
+    font-size: 18px;
+}
+.koecell{
+    font-size:10.5px;
+    border:0px;
+}
+
+.komidashi{
+    min-height: 20px;
+    padding: 3px;
+    margin-bottom: 20px;
+    background-color: #ffeef9;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.tdBunyaMapNm{
+    border:0.1px solid #ccc;
+    color : #333;
+    padding:1px 4px 1px 4px ;
+    opacity: 0.9;
+}
+
+.tdBunyaInputNm{
+    border:0.1px solid #ccc;
+    color : #333;
+    padding:2px 6px 2px 6px ;
+    opacity: 0.9;
+}
+
+.tdBunyaKensu{
+    border:1px solid #ccc;
+    color : #333;
+    border-left: 0px;
+    padding:1px 4px 1px 4px ;
+}
+
+.kaitei{
+    font-size:14px;
+    margin:0 0 5px 0;
+}
+
+.panel.with-nav-tabs .panel-heading{
+    padding: 5px 5px 0 5px;
+}
+.panel.with-nav-tabs .nav-tabs{
+    border-bottom: none;
+}
+.panel.with-nav-tabs .nav-justified{
+    margin-bottom: -1px;
+}
+
+.larger-badge {
+    font-size: 0.8em;
+}
+
+.spinner-lg {
+    background-image:url(../../../static/image/load_anime.gif); 
+    background-repeat:  no-repeat;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.btn-lglg{padding:10px 36px;font-size:26px;line-height:2.3333333;border-radius:6px}
+
+/********************************************************************/
+/*** PANEL DEFAULT ***/
+.with-nav-tabs.panel-default .nav-tabs > li > a,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #777;
+}
+.with-nav-tabs.panel-default .nav-tabs > .open > a,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #777;
+    background-color: #ddd;
+    border-color: transparent;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
+    color: #555;
+    background-color: #fff;
+    border-color: #ddd;
+    border-bottom-color: transparent;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #777;   
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: #ddd;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #555;
+}
+/********************************************************************/
+/*** PANEL PRIMARY ***/
+.with-nav-tabs.panel-primary .nav-tabs > li > a,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+}
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+    background-color: #3071a9;
+    border-color: transparent;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+    color: #428bca;
+    background-color: #fff;
+    border-color: #428bca;
+    border-bottom-color: transparent;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #428bca;
+    border-color: #3071a9;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #fff;   
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: #3071a9;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    background-color: #4a9fe9;
+}
+
+
+
+input[type="range"] {
+    -webkit-appearance: none; /* 🚩これ無しだとスタイルがほぼ全く反映されないので注意 */
+    appearance: none;
+    cursor: pointer; /* カーソルを分かりやすく */
+    outline: none; /* スライダーのアウトラインは見た目がキツイので消す */
+    height: 8px; /* バーの高さ */
+    width: 100%; /* バーの幅 */
+    background: #b78ed2; /* バーの背景色 */
+    border-radius: 10px; /* バーの両端の丸み */
+    border: solid 0px #dff1ff; /* バー周囲の線 */
+  }
+  /* WebKit向けのつまみ */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /*  🚩デフォルトのつまみのスタイルを解除 */
+    background: #73389a; /* 背景色 */
+    width: 20px; /* 幅 */
+    height: 20px; /* 高さ */
+    border-radius: 50%; /* 円形に */
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+  }
+  /* Moz向けのつまみ */
+  input[type="range"]::-moz-range-thumb {
+    background: #53aeff; /* 背景色 */
+    width: 24px; /* 幅 */
+    height: 24px; /* 高さ */
+    border-radius: 50%; /* 円形に */
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+    border: none; /* デフォルトの線を消す */
+  }
+  /* Firefoxで点線が周りに表示されてしまう問題の解消 */
+  input[type="range"]::-moz-focus-outer {
+    border: 0;
+  }
+  /* つまみをドラッグしているときのスタイル */
+  input[type="range"]:active::-webkit-slider-thumb {
+    box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3);
+  }
+
+
+
+  table.jp-map {
+    width: 100%;
+    }
+    table.jp-map,
+    table.jp-map td,
+    table.jp-map th {
+    border-collapse: collapse;
+    }
+    table.jp-map td,
+    table.jp-map th {
+    padding: 10px;
+    text-align: center;
+    }
+    table.jp-map td[class] {
+    padding: 2px 2px 2px 2px;
+    margin : 0px 0px 0px 0px;
+    font-size:10.5px;
+    }
+    table.jp-map td a {
+    color: #ffffff;
+    text-decoration: none;
+    }
+    .hokkaido {
+    background-color: #673AB7;
+    opacity: 0.20;
+    border: #673AB7 1px solid;
+    }
+    .tohoku {
+    background-color: #3F51B5;
+    opacity: 0.20;
+    border: #3F51B5 1px solid;
+}
+    .kanto {
+    background-color: #2196F3;
+    opacity: 0.20;
+    border: #2196F3 1px solid;
+}
+    .chubu {
+    background-color: #009688;
+    opacity: 0.20;
+    border: #009688 1px solid;
+}
+    .kinki {
+    background-color: #FFC107;
+    opacity: 0.20;
+    border: #FFC107 1px solid;
+}
+    .chugoku {
+    background-color: #FF9800;
+    opacity: 0.20;
+    border: #FF9800 1px solid;
+}
+    .shikoku {
+    background-color: #FF5722;
+    opacity: 0.20;
+    border: #FF5722 1px solid;
+}
+    .kyushu {
+    background-color: #f44336;
+    opacity: 0.20;
+    border: #f44336 1px solid;
+}
+    .okinawa {
+    background-color: #E91E63;
+    opacity: 0.20;
+    border: #E91E63 1px solid;
+}
+
+
+.tdfk_flash{
+    animation: flash 3s linear infinite;
+  }
+  @keyframes flash {
+    0%,100% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  }
+
+  
+
+.richline{
+    border-color: #d3d3d3;
+    animation: border-color 10s infinite;
+    -webkit-animation: border-color 10s infinite;
+}
+
+@-webkit-keyframes border-color {
+    0% { border-color: #D3D3D3; }
+    20% { border-color: #DDBEBE; }
+    40% { border-color: #C4C2C2; }
+    60% { border-color: #C6C6C6; }
+    80% { border-color: #CCB8B7; }
+    100% { border-color: #D3D3D3; }
+}
+
+@keyframes border-color {
+    0% { border-color: #D3D3D3; }
+    20% { border-color: #DDBEBE; }
+    40% { border-color: #C4C2C2; }
+    60% { border-color: #C6C6C6; }
+    80% { border-color: #CCB8B7; }
+    100% { border-color: #D3D3D3; }
+}
