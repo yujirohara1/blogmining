@@ -7,36 +7,7 @@ from collections import defaultdict
 from datetime import timedelta
 import datetime
 from flask_bootstrap import Bootstrap
-from marshmallow_sqlalchemy import ModelSchema
-from reportlab.pdfgen import canvas
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.cidfonts import UnicodeCIDFont
-from reportlab.lib.pagesizes import A4, portrait
-from reportlab.platypus import Table, TableStyle
-from reportlab.lib.units import mm
-from reportlab.lib import colors
-from api.database import db, ma
-from models.item import Item, ItemSchema, VItemGroup, VItemGroupSchema
-from models.customer import Customer, CustomerSchema, CustomerNentuki, CustomerNentukiSchema
-from models.mstsetting import MstSetting, MstSettingSchema
-from models.daicho import Daicho, DaichoSchema, VDaichoA, VDaichoASchema
-from models.seikyu import Seikyu, SeikyuSchema, VSeikyuA, VSeikyuASchema, VSeikyuB, VSeikyuBSchema, VSeikyuC, VSeikyuCSchema
-# from models.toko import Toko, TokoSchema, 
-# from models.tokoradar import TokoRadar, TokoRadarSchema, VTokoRadarGroupByVendor, VTokoRadarGroupByVendorSchema
-# from models.bunya import Bunya, BunyaSchema
-from models.kaito import Kaito, KaitoSchema, VTokoGroupbyVendor, VTokoGroupbyVendorSchema, VTokoGroupbySystem, VTokoGroupbySystemSchema, VTokoRadarGroupByVendor, VTokoRadarGroupByVendorSchema, VBunyaMapGroupbyVendor, VBunyaMapGroupbyVendorSchema, VTodohukenGroupbyVendor, VTodohukenGroupbyVendorSchema
-from sqlalchemy.sql import text
-from sqlalchemy import distinct
-from sqlalchemy import desc
-from sqlalchemy import asc
 import json
-# from rq import Queue
-# from worker import conn
-import PyPDF2
-# from bottle import route, run
-import smtplib
-from email.mime.text import MIMEText
-from email.utils import formatdate
 import csv
 import requests
 from bs4 import BeautifulSoup
