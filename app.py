@@ -40,6 +40,9 @@ from email.utils import formatdate
 import csv
 import requests
 from bs4 import BeautifulSoup
+import collections
+from janome.tokenizer import Tokenizer
+from wordcloud import WordCloud
 
 
 class FlaskWithHamlish(Flask):
@@ -77,10 +80,35 @@ def tryScrapeKiji(kijiId):
     if soup.find(class_='entry-date') is not None:
       date_text = formatDate(soup.find(class_='entry-date').get_text())
 
+    # 文字の整形（改行削除）
+    text = "".join(body_text.splitlines())
+
+    # 単語ごとに抽出
+    docs=[]
+    t = Tokenizer()
+    tokens = t.tokenize(text)
+    for token in tokens:
+        if len(token.base_form) > 2:
+            docs.append(token.surface)
+    
+    c_word = ' '.join(docs)
+    
+    filepath = ''
+    filename = ''
+    if c_word != '':
+      wordcloud = WordCloud(background_color='white',
+                          font_path='NotoSansJP-Regular.otf',
+                          width=800, height=400).generate(c_word)
+      ## 結果を画像に保存
+      filename = "wordcloud" + kijiId + ".png"
+      filepath = "./static/image/" + filename
+      wordcloud.to_file(filepath)
+
     dictJuchu["aaData"].append( \
       {"id":kijiId, \
         "title":title_text.replace("\n",""), \
-        "todofuken": "aaa", \
+        "kaiseki": c_word, \
+          "filepath": filename, \
           "category": cate_text.replace("\n",""), \
             "tokoDate": date_text, \
               "honbun": body_text.replace("\n","")} 

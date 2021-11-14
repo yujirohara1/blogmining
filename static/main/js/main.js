@@ -17,15 +17,25 @@ function createMainTable(binddata){
         destroy: true,
         "processing": true,
         columns: [
-          { data: 'id'         ,width: '5%',  className: 'dt-body-left'},
-          { data: 'tokoDate'    ,width: '10%',  className: 'dt-body-left'},
-          { data: 'title'      ,width: '10%',  className: 'dt-body-left'},
-          { data: 'category'      ,width: '10%',  className: 'dt-body-left'},
-          { data: 'honbun' ,width: '65%' ,  className: 'dt-body-left', render: 
+          { data: 'id'         ,width: '3%',  className: 'dt-body-left'},
+          { data: 'tokoDate'    ,width: '7%',  className: 'dt-body-left'},
+          { data: 'title'      ,width: '8%',  className: 'dt-body-left'},
+          { data: 'category'      ,width: '7%',  className: 'dt-body-left'},
+          { data: 'honbun' ,width: '30%' ,  className: 'dt-body-left', render: 
             function (data, type, row) { 
                 return data;
             }
-          }
+          },
+          { data: 'kaiseki'      ,width: '15%',  className: 'dt-body-left'},
+          { data: 'filepath' ,width: '15%' ,  className: 'dt-body-left', render: 
+            function (data, type, row) { 
+                if(data=="&nbsp;") return data;
+
+                var tag = "";
+                tag = tag + "<img src= '../static/image/" + data + "' width=100% height=100% />";
+                return tag;
+            }
+          },
         ],
         language: {
            url: "../static/main/js/japanese.json",
@@ -58,6 +68,8 @@ function insertBlankRow(){
     var td="";
     td += "<td class='cell-loading' style='color:white'>999999</td>";
     td += "<td class='cell-loading' style='color:white'>999999</td>";
+    td += "<td class='cell-loading'>&nbsp;</td>";
+    td += "<td class='cell-loading'>&nbsp;</td>";
     td += "<td class='cell-loading'>&nbsp;</td>";
     td += "<td class='cell-loading'>&nbsp;</td>";
     td += "<td class='cell-loading'>&nbsp;</td>";
