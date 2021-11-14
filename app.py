@@ -100,7 +100,9 @@ def tryScrapeKiji(kijiId):
                           font_path='NotoSansJP-Regular.otf',
                           width=800, height=400).generate(c_word)
       ## 結果を画像に保存
-      filename = "wordcloud" + kijiId + ".png"
+      timestamp = datetime.datetime.now()
+      timestampStr = timestamp.strftime('%Y%m%d%H%M%S%f')
+      filename = "wordcloud_" + timestampStr + "_" + kijiId + ".png"
       filepath = "./static/image/" + filename
       wordcloud.to_file(filepath)
 
