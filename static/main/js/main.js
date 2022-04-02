@@ -93,7 +93,7 @@ function getNextRow(){
             }
         }
 
-        if(loopCnt < 1000){
+        if(loopCnt < 2000){
             getNextRow();
         } else{
             mainTable.row(".newRow").remove().draw();
